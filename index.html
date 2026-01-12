@@ -2,17 +2,63 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Exclusive Content</title>
-<link rel="stylesheet" href="style.css">
+<title>Private Videos</title>
+<style>
+body{background:#0e0e0e;color:#fff;font-family:Arial}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.thumb{background:#1c1c1c;padding:10px;border-radius:8px;cursor:pointer}
+.thumb img{width:100%;border-radius:6px}
+</style>
 </head>
 <body>
-<div class="hero center">
-  <div>
-    <h1>Exclusive Private Video</h1>
-    <p>Access hidden content available for limited users</p>
-    <a class="btn" href="details.html">WATCH VIDEO</a>
-    <div class="warning">18+ Only</div>
+
+<h2>Choose a Video</h2>
+
+<div class="grid">
+  <div class="thumb" onclick="choose(1)">
+    <img src="https://picsum.photos/300/200?1">
+    <p>Video 1</p>
+  </div>
+  <div class="thumb" onclick="choose(2)">
+    <img src="https://picsum.photos/300/200?2">
+    <p>Video 2</p>
+  </div>
+  <div class="thumb" onclick="choose(3)">
+    <img src="https://picsum.photos/300/200?3">
+    <p>Video 3</p>
+  </div>
+  <div class="thumb" onclick="choose(4)">
+    <img src="https://picsum.photos/300/200?4">
+    <p>Video 4</p>
+  </div>
+  <div class="thumb" onclick="choose(5)">
+    <img src="https://picsum.photos/300/200?5">
+    <p>Video 5</p>
+  </div>
+  <div class="thumb" onclick="choose(6)">
+    <img src="https://picsum.photos/300/200?6">
+    <p>Video 6</p>
+  </div>
+  <div class="thumb" onclick="choose(7)">
+    <img src="https://picsum.photos/300/200?7">
+    <p>Video 7</p>
+  </div>
+  <div class="thumb" onclick="choose(8)">
+    <img src="https://picsum.photos/300/200?8">
+    <p>Video 8</p>
+  </div>
+  <div class="thumb" onclick="choose(9)">
+    <img src="https://picsum.photos/300/200?9">
+    <p>Video 9</p>
   </div>
 </div>
+
+<script>
+function choose(id){
+  localStorage.setItem("video_id", id);
+  window.location.href = "locker.html";
+}
+</script>
+
 </body>
 </html>
