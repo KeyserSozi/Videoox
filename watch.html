@@ -3,21 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <title>Watch</title>
-<link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
+<style>
+body{background:#0e0e0e;color:#fff;font-family:Arial;text-align:center}
+.player{margin-top:50px;background:#000;height:300px;
+display:flex;align-items:center;justify-content:center;color:#777}
+</style>
 </head>
 <body>
-<div class="container">
-  <div class="card center">
-    <h2 id="videoTitle">Private Video</h2>
-    <p>Playback unlocked</p>
 
-    <!-- Player شكلي -->
-    <div style="background:#000;height:300px;border-radius:10px;
-    display:flex;align-items:center;justify-content:center;color:#777">
-      ▶ Video Player
-    </div>
-  </div>
+<h2 id="title"></h2>
+
+<div class="player">
+ ▶ Video Player
 </div>
+
+<script>
+const id = localStorage.getItem("video_id");
+document.getElementById("title").innerText =
+  "Private Video #" + id;
+</script>
+
 </body>
 </html>
