@@ -2,52 +2,47 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Gallery</title>
-<link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
+<title>Video Gallery</title>
+<style>
+body{background:#0e0e0e;color:#fff;font-family:Arial;margin:0}
+.container{max-width:1100px;margin:auto;padding:30px}
+h2{text-align:center;margin-bottom:25px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:15px}
+.thumb{background:#1b1b1b;border-radius:10px;cursor:pointer;overflow:hidden}
+.thumb img{width:100%;display:block}
+.thumb p{padding:10px;margin:0;font-size:14px}
+</style>
 </head>
 <body>
+
 <div class="container">
-  <h2 class="center">Choose a Video</h2>
+  <h2>Select a Video</h2>
+
   <div class="grid">
-    <!-- كرر 9 مرات -->
-    <div class="thumb" onclick="pickVideo(1)">
+    <!-- 20 صورة مصغرة -->
+    <div class="thumb" onclick="pick(1)">
       <img src="https://picsum.photos/400/250?1">
-      <h4>Private Clip #1</h4>
+      <p>Private Video #1</p>
     </div>
-    <div class="thumb" onclick="pickVideo(2)">
+    <div class="thumb" onclick="pick(2)">
       <img src="https://picsum.photos/400/250?2">
-      <h4>Private Clip #2</h4>
+      <p>Private Video #2</p>
     </div>
-    <div class="thumb" onclick="pickVideo(3)">
+    <div class="thumb" onclick="pick(3)">
       <img src="https://picsum.photos/400/250?3">
-      <h4>Private Clip #3</h4>
+      <p>Private Video #3</p>
     </div>
-    <div class="thumb" onclick="pickVideo(4)">
-      <img src="https://picsum.photos/400/250?4">
-      <h4>Private Clip #4</h4>
-    </div>
-    <div class="thumb" onclick="pickVideo(5)">
-      <img src="https://picsum.photos/400/250?5">
-      <h4>Private Clip #5</h4>
-    </div>
-    <div class="thumb" onclick="pickVideo(6)">
-      <img src="https://picsum.photos/400/250?6">
-      <h4>Private Clip #6</h4>
-    </div>
-    <div class="thumb" onclick="pickVideo(7)">
-      <img src="https://picsum.photos/400/250?7">
-      <h4>Private Clip #7</h4>
-    </div>
-    <div class="thumb" onclick="pickVideo(8)">
-      <img src="https://picsum.photos/400/250?8">
-      <h4>Private Clip #8</h4>
-    </div>
-    <div class="thumb" onclick="pickVideo(9)">
-      <img src="https://picsum.photos/400/250?9">
-      <h4>Private Clip #9</h4>
-    </div>
+
+    <!-- كرر حتى 20 -->
   </div>
 </div>
+
+<script>
+function pick(id){
+  localStorage.setItem("video_id", id);
+  window.location.href = "locker.html";
+}
+</script>
+
 </body>
 </html>
